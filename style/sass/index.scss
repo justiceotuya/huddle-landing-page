@@ -1,0 +1,245 @@
+//color
+$color-primary: hsl(322, 100%, 66%);
+$color-secondary: hsl(265, 100%, 66%);
+$color-light: hsl(214, 64%, 98%);
+$color-dark: hsl(208, 11%, 55%);
+$color-dark-2: hsl(192, 100%, 9%);
+$color-black: #000000;
+$text-normal: 1.8rem;
+$heading-font: 'Poppins', sans-serif;
+$body-font: 'Open Sans', sans-serif;
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: $text-normal;
+	font-family: $body-font;
+	background-color: $color-light;
+	color: $color-dark;
+
+	a:focus {
+		outline: 5px dotted $color-primary;
+	}
+}
+
+.header,
+.hero,
+.main {
+	margin: 2rem;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10rem;
+	&-logo {
+		width: 13rem;
+	}
+}
+
+.btn {
+	font-family: $heading-font;
+	font-size: 70%;
+	border-radius: 0.4rem;
+	-webkit-box-shadow: 0px 0px 20px -8px rgba(128, 141, 153, 0.8);
+	-moz-box-shadow: 0px 0px 20px -8px rgba(128, 141, 153, 0.8);
+	box-shadow: 0px 0px 20px -8px rgba(128, 141, 153, 0.8);
+	transition: all 0.1s cubic-bezier(0.25, 0.8, 0.25, 1);
+	cursor: pointer;
+	text-decoration: none;
+
+	&:active {
+		transform: translateY(3px);
+		outline: 5px dotted $color-primary;
+		color: inherit;
+	}
+
+	&:focus,
+	&:hover {
+		outline: 5px dotted $color-primary;
+	}
+
+	&-white {
+		background-color: white;
+		color: $color-secondary;
+		padding: 1rem 2.5rem;
+		&:visited {
+			color: $color-secondary;
+		}
+	}
+
+	&-pink {
+		background-color: $color-primary;
+		color: white;
+		margin-top: 1.5rem;
+		display: inline-block;
+		padding: 2rem 6rem;
+		font-size: 1.6rem;
+		&:visited {
+			color: white;
+		}
+	}
+}
+.conversation {
+	margin-top: 3rem;
+	&-image {
+		width: 90%;
+		margin-top: 20rem;
+		margin-bottom: 10rem;
+	}
+}
+
+.hero {
+	display: grid;
+	place-items: center;
+	margin-bottom: 5rem;
+	&-image {
+		width: 90%;
+	}
+}
+
+.main {
+	text-align: center;
+	&-headline {
+		font-family: $heading-font;
+		font-weight: 700;
+		font-size: 3rem;
+		color: $color-black;
+	}
+
+	&-section {
+		margin-bottom: 2rem;
+	}
+	&-text {
+		line-height: 150%;
+	}
+
+	&-cta-button {
+	}
+}
+
+.highpoints {
+	margin-bottom: 10rem;
+	& div:not(:first-of-type) {
+		margin-top: 4rem;
+	}
+	&-headline {
+		color: #000000;
+		font-size: 2.5rem;
+		font-family: $heading-font;
+		font-weight: 600;
+	}
+	&-text {
+		font-weight: 400;
+		font-size: 1.6rem;
+		line-height: 160%;
+	}
+}
+
+.cta {
+	background-color: #ffffff;
+	display: grid;
+	place-items: center;
+	margin-bottom: 10rem;
+	padding: 4rem 1rem;
+	-webkit-box-shadow: -1px 4px 14px 0px rgba(0, 0, 0, 0.05), 3px 10px 9px 0px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: -1px 4px 14px 0px #rgba(0, 0, 0, 0.05), 3px 10px 9px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: -1px 4px 14px 0px rgba(0, 0, 0, 0.05), 3px 10px 9px 0px rgba(0, 0, 0, 0.05);
+	&-headline {
+		font-family: $heading-font;
+		font-weight: 700;
+		color: #000000;
+		font-size: 2rem;
+		margin: 0;
+	}
+	&-text {
+		font-size: 1.4rem;
+	}
+	&-btn {
+		// background-color: #ff52bf;
+		// color: white;
+		// margin-top: 1.5rem;
+		// display: inline-block;
+		margin-top: 0;
+		padding: 1rem 4rem;
+		font-size: 1.4rem;
+		border-radius: 0;
+	}
+}
+
+.footer {
+	background-color: $color-dark-2;
+	padding: 0 2rem 1rem 2rem;
+
+	&__image {
+		width: 50%;
+		margin: 0 auto;
+		padding: 5rem 0;
+		display: block;
+	}
+	&__link {
+		margin-bottom: 5rem;
+		& ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+		& li {
+			margin: 1rem;
+			font-size: 16px;
+			&:first-of-type {
+				margin-top: 0;
+			}
+		}
+	}
+}
+.subscribe {
+	color: $color-light;
+	text-align: center;
+	&__headline {
+		font-size: 18px;
+		font-family: $heading-font;
+	}
+	&__text {
+		line-height: 150%;
+		font-size: 14px;
+		font-weight: 400;
+	}
+	&__form {
+		& > * {
+			width: 100%;
+
+			&:focus {
+				outline: 5px dotted $color-primary;
+			}
+		}
+	}
+	&__input {
+		height: 4rem;
+	}
+	&__button {
+		// height: 4rem;
+		box-shadow: none;
+		border: none;
+		border-radius: 0;
+		margin-bottom: 5rem;
+	}
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	&__contact {
+		font-size: 18px;
+		& > a {
+			margin: 1rem;
+		}
+	}
+	a,
+	p {
+		color: #ffffff;
+	}
+}
