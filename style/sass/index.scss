@@ -245,7 +245,37 @@ body {
 	}
 }
 
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+	.header,
+	.hero,
+	.main {
+		margin: 5rem;
+	}
+
+	.subscribe__headline {
+		margin: 0;
+	}
+
+	.attribution {
+		grid-column: 1/-1;
+	}
+
+	.footer {
+		&__section {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+		}
+		&__link {
+			margin: 0 auto;
+		}
+
+		&__image {
+			width: 20%;
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
 	.header,
 	.hero,
 	.main {
@@ -281,8 +311,6 @@ body {
 	.hero {
 		&-image {
 			width: 75%;
-			// margin-top: 20rem;
-			// margin-bottom: 10rem;
 		}
 	}
 
@@ -303,7 +331,6 @@ body {
 			width: 45%;
 			align-self: flex-start;
 			margin-top: 2rem;
-			// height: 30%;
 		}
 	}
 

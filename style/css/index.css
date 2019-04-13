@@ -215,7 +215,33 @@ body a:focus {
   color: #ffffff;
 }
 
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  .header,
+.hero,
+.main {
+    margin: 5rem;
+  }
+
+  .subscribe__headline {
+    margin: 0;
+  }
+
+  .attribution {
+    grid-column: 1/-1;
+  }
+
+  .footer__section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer__link {
+    margin: 0 auto;
+  }
+  .footer__image {
+    width: 20%;
+  }
+}
+@media only screen and (min-width: 1024px) {
   .header,
 .hero,
 .main {
