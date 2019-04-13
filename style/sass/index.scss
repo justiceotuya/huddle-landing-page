@@ -83,14 +83,6 @@ body {
 		}
 	}
 }
-.conversation {
-	margin-top: 3rem;
-	&-image {
-		width: 90%;
-		margin-top: 20rem;
-		margin-bottom: 10rem;
-	}
-}
 
 .hero {
 	display: grid;
@@ -118,6 +110,15 @@ body {
 	}
 
 	&-cta-button {
+	}
+}
+
+.conversation {
+	margin-top: 3rem;
+	&-image {
+		width: 90%;
+		margin-top: 20rem;
+		margin-bottom: 10rem;
 	}
 }
 
@@ -241,5 +242,130 @@ body {
 	a,
 	p {
 		color: #ffffff;
+	}
+}
+
+@media only screen and (min-width: 576px) {
+	.header,
+	.hero,
+	.main {
+		margin: 5rem;
+	}
+
+	.header {
+		&-logo {
+			width: 20rem;
+		}
+	}
+
+	.btn {
+		font-size: 90%;
+
+		&-white {
+			padding: 1.5rem 5rem;
+		}
+
+		&-pink {
+			background-color: $color-primary;
+			color: white;
+			margin-top: 1.5rem;
+			display: inline-block;
+			padding: 2rem 6rem;
+			font-size: 1.6rem;
+			&:visited {
+				color: white;
+			}
+		}
+	}
+
+	.hero {
+		&-image {
+			width: 75%;
+			// margin-top: 20rem;
+			// margin-bottom: 10rem;
+		}
+	}
+
+	.main {
+		&-section {
+			width: 55%;
+			margin: 0 auto;
+		}
+	}
+
+	.conversation {
+		margin: 20rem 5rem 10rem 5rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&-image {
+			width: 45%;
+			align-self: flex-start;
+			margin-top: 2rem;
+			// height: 30%;
+		}
+	}
+
+	.highpoints {
+		width: 45%;
+		text-align: left;
+		margin-bottom: 0;
+	}
+
+	.cta {
+		width: 50%;
+		margin: 15rem auto;
+		padding: 6rem 0;
+		&-headline {
+			font-size: 3rem;
+		}
+		&-text {
+			font-size: 1.5rem;
+		}
+	}
+
+	.footer {
+		padding: 0 5rem 7rem 5rem;
+		&__section {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+		}
+		&__image {
+			width: 10%;
+			margin: 0;
+			display: inline-block;
+			padding-bottom: 2rem;
+		}
+		&__link > ul {
+			display: flex;
+			justify-content: space-evenly;
+		}
+	}
+	.subscribe {
+		text-align: left;
+		&__headline {
+			margin: 0;
+		}
+		&__button {
+			width: 50%;
+			padding: 2rem 4rem;
+			align-self: flex-end;
+		}
+		&__form {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	.attribution {
+		grid-column: 1/2;
+		grid-row: 1;
+		text-align: left;
+
+		&__contact {
+			margin: 0 auto;
+			padding-bottom: 1.5rem;
+		}
 	}
 }
