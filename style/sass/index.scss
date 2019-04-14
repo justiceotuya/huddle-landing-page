@@ -19,8 +19,12 @@ body {
 	background-color: $color-light;
 	color: $color-dark;
 
-	a:focus {
-		outline: 5px dotted $color-primary;
+	a {
+		text-decoration: none;
+	}
+	a:focus,
+	li a:focus {
+		outline: 5px dotted $color-secondary;
 	}
 }
 
@@ -53,13 +57,13 @@ body {
 
 	&:active {
 		transform: translateY(3px);
-		outline: 5px dotted $color-primary;
+		outline: 5px dotted $color-secondary;
 		color: inherit;
 	}
 
 	&:focus,
 	&:hover {
-		outline: 5px dotted $color-primary;
+		outline: 5px dotted $color-secondary;
 	}
 
 	&-white {
@@ -194,6 +198,10 @@ body {
 			&:first-of-type {
 				margin-top: 0;
 			}
+
+			& > a:visited {
+				color: $color-light;
+			}
 		}
 	}
 }
@@ -214,7 +222,7 @@ body {
 			width: 100%;
 
 			&:focus {
-				outline: 5px dotted $color-primary;
+				outline: 5px dotted $color-secondary;
 			}
 		}
 	}
@@ -252,8 +260,13 @@ body {
 		margin: 5rem;
 	}
 
-	.subscribe__headline {
-		margin: 0;
+	.subscribe {
+		text-align: center;
+		width: 80%;
+		margin: 0 auto;
+		&__headline {
+			margin: 0;
+		}
 	}
 
 	.attribution {
